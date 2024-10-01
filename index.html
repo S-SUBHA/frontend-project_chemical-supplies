@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chemical Supplies</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <h1>Chemical Supplies</h1>
-      <div>
+      <nav>
         <div id="add-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#0000ff"
+            fill="#fff"
           >
             <path
               d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
@@ -29,7 +29,7 @@
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#000000"
+            fill="#fff"
           >
             <path
               d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"
@@ -42,7 +42,7 @@
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#000000"
+            fill="#fff"
           >
             <path
               d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
@@ -55,7 +55,7 @@
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#ff0000"
+            fill="#ff1010"
           >
             <path
               d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
@@ -68,7 +68,7 @@
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#000000"
+            fill="#fff"
           >
             <path
               d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"
@@ -81,34 +81,48 @@
             height="32px"
             viewBox="0 -960 960 960"
             width="32px"
-            fill="#00ff00"
+            fill="#0fff0f"
           >
             <path
               d="M840-680v480q0 33-23.5 56.5T760-120H200q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h480l160 160Zm-80 34L646-760H200v560h560v-446ZM480-240q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM240-560h360v-160H240v160Zm-40-86v446-560 114Z"
             />
           </svg>
         </div>
-      </div>
+      </nav>
     </header>
 
     <main>
-      <table id="chemicals-table">
-        <thead id="ct-head">
-          <tr>
-            <th id="Select-All-header">Select All</th>
-            <th id="Id-header">Id</th>
-            <th id="Chemical-Name-header">Chemical Name</th>
-            <th id="Vendor-header">Vendor</th>
-            <th id="Density-header">Density</th>
-            <th id="Viscosity-header">Viscosity</th>
-            <th id="Packaging-header">Packaging</th>
-            <th id="Pack-Size-header">Pack size</th>
-            <th id="Unit-header">Unit</th>
-            <th id="Quantity-header">Quantity</th>
-          </tr>
-        </thead>
-        <tbody id="ct-body"></tbody>
-      </table>
+      <div class="container">
+        <table id="chemicals-table">
+          <thead id="ct-head">
+            <tr>
+              <th id="Select-All-header">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#000000"
+                >
+                  <path
+                    d="M268-240 42-466l57-56 170 170 56 56-57 56Zm226 0L268-466l56-57 170 170 368-368 56 57-424 424Zm0-226-57-56 198-198 57 56-198 198Z"
+                  />
+                </svg>
+              </th>
+              <th id="Id-header">Id</th>
+              <th id="Chemical-Name-header">Chemical Name</th>
+              <th id="Vendor-header">Vendor</th>
+              <th id="Density-header">Density</th>
+              <th id="Viscosity-header">Viscosity</th>
+              <th id="Packaging-header">Packaging</th>
+              <th id="Pack-Size-header">Pack size</th>
+              <th id="Unit-header">Unit</th>
+              <th id="Quantity-header">Quantity</th>
+            </tr>
+          </thead>
+          <tbody id="ct-body"></tbody>
+        </table>
+      </div>
     </main>
 
     <footer></footer>

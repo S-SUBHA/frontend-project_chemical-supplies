@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* color-scheme: dark; */
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+
+  background-color: #4189df;
+  color: #fff;
+
+  h1 {
+    margin-left: 1rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 0.5rem;
+
+    div {
+      padding: 0.1rem;
+    }
+
+    div:hover {
+      background: #1163c880;
+      border-radius: 20%;
+      box-shadow: 3px 3px 3px #00000040;
+      cursor: pointer;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#chemicals-table {
+  width: 98%;
+
+  border-collapse: collapse;
+
+  background: #f0f00040;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  * {
+    background: transparent;
+    /* margin: 0;
+    padding: 0; */
+  }
+
+  #ct-head {
+    background: #f0f00080;
+  }
+
+  th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+
+    font-weight: bold;
+    font-size: medium;
+  }
+
+  th:hover {
+    background: #0000ff20;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px #00000040;
+  }
+
+  td input {
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+
+    border: none;
+    outline: none;
+  }
+
+  tbody {
+    td input:focus {
+      box-shadow: 0.2rem 0.2rem 0.2rem #00000020,
+        -0.2rem 0.2rem 0.2rem #00000020, 0.2rem -0.2rem 0.2rem #00000020,
+        -0.2rem -0.2rem 0.2rem #00000020;
+    }
+
+    tr:nth-of-type(2n) {
+      background: #0000ff10;
+    }
+
+    tr:nth-of-type(2n):hover {
+      background: #0000ff40;
+    }
+
+    tr:hover {
+      background: #0000ff40;
+    }
+  }
+
+  td,
+  th {
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  td:nth-of-type(1),
+  th:nth-of-type(1) {
+    /* min-width: 2rem; */
+    text-align: center;
+
+    input:hover {
+      cursor: pointer;
+    }
+  }
+
+  td:nth-of-type(2),
+  th:nth-of-type(2) {
+    max-width: 3rem;
+  }
+
+  td:nth-of-type(5),
+  th:nth-of-type(5) {
+    max-width: 6rem;
+  }
+  td:nth-of-type(6),
+  th:nth-of-type(6) {
+    max-width: 6rem;
+  }
+  td:nth-of-type(7),
+  th:nth-of-type(7) {
+    max-width: 6rem;
+  }
+  td:nth-of-type(8),
+  th:nth-of-type(8) {
+    max-width: 6rem;
+  }
+  td:nth-of-type(9),
+  th:nth-of-type(9) {
+    max-width: 6rem;
+  }
+  td:nth-of-type(10),
+  th:nth-of-type(10) {
+    max-width: 6rem;
+  }
+}
