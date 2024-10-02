@@ -18,18 +18,20 @@ const saveBtn = document.querySelector("#save");
 const tBody = document.querySelector("#ct-body");
 
 const selectAllHeader = document.querySelector("#Select-All-header");
-const idHeader = document.querySelector("#Id-header");
-const chemicalNameHeader = document.querySelector("#Chemical-Name-header");
-const vendorHeader = document.querySelector("#Vendor-header");
-const densityHeader = document.querySelector("#Density-header");
-const viscosityHeader = document.querySelector("#Viscosity-header");
-const packagingHeader = document.querySelector("#Packaging-header");
-const packSizeHeader = document.querySelector("#Pack-Size-header");
-const unitHeader = document.querySelector("#Unit-header");
-const quantityHeader = document.querySelector("#Quantity-header");
+const tableHeaders = [
+  document.querySelector("#Id-header"),
+  document.querySelector("#Chemical-Name-header"),
+  document.querySelector("#Vendor-header"),
+  document.querySelector("#Density-header"),
+  document.querySelector("#Viscosity-header"),
+  document.querySelector("#Packaging-header"),
+  document.querySelector("#Pack-Size-header"),
+  document.querySelector("#Unit-header"),
+  document.querySelector("#Quantity-header"),
+];
 
 let dataSet = (await getData()) ?? [];
-let sortedAscending = true;
+let sortedAscending = false;
 
 (() => {
   let i = 0;
@@ -77,56 +79,10 @@ selectAllHeader.addEventListener("click", (e) => {
   rows.forEach((row) => toggleChecked(row.cells[0].children[0]));
 });
 
-idHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-chemicalNameHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-vendorHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-densityHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-viscosityHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-packagingHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-packSizeHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-unitHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
-});
-
-quantityHeader.addEventListener("click", (e) => {
-  sortedAscending = !sortedAscending;
-  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
-  refresh(tBody, dataSet, createTr);
+tableHeaders.forEach((tableHeader) => {
+  tableHeader.addEventListener("click", (e) => {
+    sortedAscending = !sortedAscending;
+    sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
+    refresh(tBody, dataSet, createTr);
+  });
 });
