@@ -6,7 +6,7 @@
     "density": 0.789,
     "viscosity": 0.32,
     "packaging": "Bottle",
-    "pack size": "1 L",
+    "pack size": 1,
     "unit": "liters",
     "quantity": 50
   },
@@ -17,7 +17,7 @@
     "density": 2.165,
     "viscosity": 1.0,
     "packaging": "Bag",
-    "pack size": "500 g",
+    "pack size": 500,
     "unit": "grams",
     "quantity": 200
   },
@@ -28,7 +28,7 @@
     "density": 0.789,
     "viscosity": 1.2,
     "packaging": "Drum",
-    "pack size": "20 L",
+    "pack size": 20,
     "unit": "liters",
     "quantity": 30
   },
@@ -39,7 +39,7 @@
     "density": 1.19,
     "viscosity": 0.9,
     "packaging": "Container",
-    "pack size": "5 L",
+    "pack size": 5,
     "unit": "liters",
     "quantity": 15
   },
@@ -50,7 +50,7 @@
     "density": 2.13,
     "viscosity": 0.7,
     "packaging": "Bag",
-    "pack size": "1 kg",
+    "pack size": 1,
     "unit": "kilograms",
     "quantity": 120
   },
@@ -61,7 +61,7 @@
     "density": 0.876,
     "viscosity": 0.65,
     "packaging": "Canister",
-    "pack size": "2.5 L",
+    "pack size": 2.5,
     "unit": "liters",
     "quantity": 25
   },
@@ -72,7 +72,7 @@
     "density": 0.791,
     "viscosity": 0.59,
     "packaging": "Bottle",
-    "pack size": "1 L",
+    "pack size": 1,
     "unit": "liters",
     "quantity": 40
   },
@@ -83,7 +83,7 @@
     "density": 2.71,
     "viscosity": 1.0,
     "packaging": "Bag",
-    "pack size": "2 kg",
+    "pack size": 2,
     "unit": "kilograms",
     "quantity": 80
   },
@@ -94,7 +94,7 @@
     "density": 1.05,
     "viscosity": 1.2,
     "packaging": "Bottle",
-    "pack size": "500 mL",
+    "pack size": 500,
     "unit": "milliliters",
     "quantity": 60
   },
@@ -105,7 +105,7 @@
     "density": 1.84,
     "viscosity": 18.1,
     "packaging": "Drum",
-    "pack size": "10 L",
+    "pack size": 10,
     "unit": "liters",
     "quantity": 20
   },
@@ -116,7 +116,7 @@
     "density": 2.1,
     "viscosity": 1.0,
     "packaging": "Bag",
-    "pack size": "1 kg",
+    "pack size": 1,
     "unit": "kilograms",
     "quantity": 150
   },
@@ -127,7 +127,7 @@
     "density": 0.866,
     "viscosity": 0.59,
     "packaging": "Canister",
-    "pack size": "5 L",
+    "pack size": 5,
     "unit": "liters",
     "quantity": 35
   },
@@ -138,7 +138,7 @@
     "density": 1.26,
     "viscosity": 1.5,
     "packaging": "Bottle",
-    "pack size": "1 L",
+    "pack size": 1,
     "unit": "liters",
     "quantity": 45
   },
@@ -149,7 +149,7 @@
     "density": 1.77,
     "viscosity": 1.0,
     "packaging": "Bag",
-    "pack size": "25 kg",
+    "pack size": 25,
     "unit": "kilograms",
     "quantity": 10
   },
@@ -160,7 +160,7 @@
     "density": 1.41,
     "viscosity": 1.2,
     "packaging": "Container",
-    "pack size": "5 L",
+    "pack size": 5,
     "unit": "liters",
     "quantity": 12
   }
