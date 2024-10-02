@@ -3,9 +3,11 @@ import { getFromLocalStorage } from "./index.js";
 export async function getData() {
   const data =
     getFromLocalStorage("chemicalSupplies") ??
-    (await fetch("../../data/data.json")
+    (await fetch(
+      "https://s-subha.github.io/frontend-project_chemical-supplies/data/data.json"
+    )
       .then((res) => res.json())
-      .catch((error) => console.error(error)));
+      .catch((error) => console.log(`Error fetching Data: ${error}`)));
 
   return data;
 }
