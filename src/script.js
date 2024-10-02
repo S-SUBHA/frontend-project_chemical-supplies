@@ -4,17 +4,17 @@ import {
   moveRowDown,
   moveRowUp,
   refresh,
+  saveData,
 } from "./features/index.js";
-import { createTr, sortData, toggleChecked } from "./utils/index.js";
+import { createTr, getData, sortData, toggleChecked } from "./utils/index.js";
 
 const addRowBtn = document.querySelector("#add-row");
 const moveDownBtn = document.querySelector("#move-down");
 const moveUpBtn = document.querySelector("#move-up");
 const deleteBtn = document.querySelector("#delete");
 const refreshBtn = document.querySelector("#refresh");
+const saveBtn = document.querySelector("#save");
 
-const table = document.querySelector("#chemicals-table");
-const tHead = document.querySelector("#ct-head");
 const tBody = document.querySelector("#ct-body");
 
 const selectAllHeader = document.querySelector("#Select-All-header");
@@ -28,16 +28,13 @@ const packSizeHeader = document.querySelector("#Pack-Size-header");
 const unitHeader = document.querySelector("#Unit-header");
 const quantityHeader = document.querySelector("#Quantity-header");
 
-let sampleData = await fetch("../public/data.json")
-  .then((res) => res.json())
-  .catch((error) => console.error(error));
+let sampleData = (await getData()) ?? [];
 
 (() => {
   let i = 0;
   Array.isArray(sampleData) &&
     sampleData.forEach((data) => {
       tBody.appendChild(createTr(data, i++));
-      // console.log(data);
     });
 })();
 
@@ -48,9 +45,8 @@ addRowBtn.addEventListener("click", () => {
 });
 
 refreshBtn.addEventListener("click", () => {
-  fetch("../public/data.json")
-    .then((res) => res.json())
-    .then((data) => (sampleData = data))
+  getData()
+    .then((data) => (sampleData = data || []))
     .then(() => refresh(tBody, sampleData, createTr))
     .catch((error) => console.error(error));
 });
@@ -68,6 +64,10 @@ moveDownBtn.addEventListener("click", () => {
 deleteBtn.addEventListener("click", () => {
   sampleData = deleteRows(tBody, sampleData);
   refresh(tBody, sampleData, createTr);
+});
+
+saveBtn.addEventListener("click", () => {
+  saveData(sampleData);
 });
 
 // Table-headers
