@@ -1,5 +1,5 @@
 export function createTr(data, rowId) {
-  const numbers = ["id", "density", "viscosity", "quantity"];
+  const numbers = ["id", "density", "viscosity", "pack size", "quantity"];
 
   const tr = document.createElement("tr");
   tr.id = rowId;
@@ -13,9 +13,7 @@ export function createTr(data, rowId) {
     tr.appendChild(td);
   })();
 
-  for (const Key in data) {
-    const key = Key.toLowerCase();
-
+  for (const key in data) {
     const td = document.createElement("td");
     const input = document.createElement("input");
 
@@ -23,12 +21,18 @@ export function createTr(data, rowId) {
 
     if (key === "id") input.disabled = true;
 
-    if (numbers.includes(key)) input.type = "number";
-
-    input.value = numbers.includes(key) ? Number(data[Key]) : data[Key];
+    if (numbers.includes(key)) {
+      input.type = "number";
+      input.value = Number(data[key]);
+      input.addEventListener("focus", (e) => {
+        e.target.select();
+      });
+    } else {
+      input.value = data[key];
+    }
 
     input.addEventListener("change", (e) => {
-      data[Key] = numbers.includes(key)
+      data[key] = numbers.includes(key)
         ? Number(e.target.value)
         : e.target.value;
     });

@@ -31,7 +31,7 @@ const tableHeaders = [
 ];
 
 let dataSet = (await getData()) ?? [];
-let sortedAscending = false;
+let sortedAscending = true;
 
 (() => {
   let i = 0;

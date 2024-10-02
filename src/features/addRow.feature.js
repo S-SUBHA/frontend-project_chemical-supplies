@@ -1,14 +1,17 @@
 export function addRow(data) {
+  let id = 0;
+  data.forEach(val => id = Math.max(val.id, id));
+  
   const row = {
-    id: data.length ? data.slice(-1)[0].id + 1 : 1,
-    "Chemical name": "",
-    Vendor: "",
-    Density: "",
-    Viscosity: "",
-    Packaging: "",
-    "Pack size": "",
-    Unit: "",
-    Quantity: "",
+    id: id + 1,
+    "chemical name": "",
+    vendor: "",
+    density: "",
+    viscosity: "",
+    packaging: "",
+    "pack size": "",
+    unit: "",
+    quantity: "",
   };
 
   data.push(row);
