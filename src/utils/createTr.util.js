@@ -1,5 +1,5 @@
 export function createTr(data, rowId) {
-  const numbers = ["id", "Density", "Viscosity", "Quantity"];
+  const numbers = ["id", "density", "viscosity", "quantity"];
 
   const tr = document.createElement("tr");
   tr.id = rowId;
@@ -13,18 +13,24 @@ export function createTr(data, rowId) {
     tr.appendChild(td);
   })();
 
-  for (const key in data) {
+  for (const Key in data) {
+    const key = Key.toLowerCase();
+
     const td = document.createElement("td");
     const input = document.createElement("input");
-    input.value = data[key];
+
     input.id = `${key}${rowId}`;
+
     if (key === "id") input.disabled = true;
 
+    if (numbers.includes(key)) input.type = "number";
+
+    input.value = numbers.includes(key) ? Number(data[Key]) : data[Key];
+
     input.addEventListener("change", (e) => {
-      data[key] = numbers.includes(key)
+      data[Key] = numbers.includes(key)
         ? Number(e.target.value)
         : e.target.value;
-      // console.log(data);
     });
 
     td.appendChild(input);
