@@ -1,5 +1,6 @@
 export function getFromLocalStorage(key) {
-  const data = JSON.parse(localStorage.getItem(key));
+  const rawData = localStorage.getItem(key);
+  const data =  JSON.parse(rawData) ;
 
   return data;
   // if (data && Array.isArray(data) && data.length > 0) return data;
