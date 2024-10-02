@@ -60,6 +60,8 @@ header {
 
   border-collapse: collapse;
 
+  border-bottom: solid 1px #0000ff40;
+
   background: #f0f00040;
 
   margin-left: auto;
@@ -75,6 +77,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+
     background: #f0e517;
     text-wrap: nowrap;
   }
@@ -131,6 +134,8 @@ header {
   th {
     vertical-align: middle;
     text-align: left;
+    border-left: solid 1px #0000ff40;
+    border-right: solid 1px #0000ff40;
   }
 
   td:nth-of-type(1),
