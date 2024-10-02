@@ -192,6 +192,11 @@ header {
 @media (max-width: 720px) {
   header {
     flex-direction: column;
+    justify-content: center;
     gap: 1rem;
+
+    h1, nav{
+      margin: 0;
+    }
   }
 }
