@@ -29,6 +29,7 @@ const unitHeader = document.querySelector("#Unit-header");
 const quantityHeader = document.querySelector("#Quantity-header");
 
 let dataSet = (await getData()) ?? [];
+let sortedAscending = true;
 
 (() => {
   let i = 0;
@@ -77,46 +78,55 @@ selectAllHeader.addEventListener("click", (e) => {
 });
 
 idHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 chemicalNameHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 vendorHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 densityHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 viscosityHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 packagingHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 packSizeHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 unitHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
 
 quantityHeader.addEventListener("click", (e) => {
-  sortData(dataSet, e.target.innerText.toLowerCase());
+  sortedAscending = !sortedAscending;
+  sortData(dataSet, e.target.innerText.toLowerCase(), sortedAscending);
   refresh(tBody, dataSet, createTr);
 });
