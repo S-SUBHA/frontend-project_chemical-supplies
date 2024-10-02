@@ -28,46 +28,46 @@ const packSizeHeader = document.querySelector("#Pack-Size-header");
 const unitHeader = document.querySelector("#Unit-header");
 const quantityHeader = document.querySelector("#Quantity-header");
 
-let sampleData = (await getData()) ?? [];
+let dataSet = (await getData()) ?? [];
 
 (() => {
   let i = 0;
-  Array.isArray(sampleData) &&
-    sampleData.forEach((data) => {
+  Array.isArray(dataSet) &&
+    dataSet.forEach((data) => {
       tBody.appendChild(createTr(data, i++));
     });
 })();
 
 // Toolbar-buttons
 addRowBtn.addEventListener("click", () => {
-  addRow(sampleData);
-  refresh(tBody, sampleData, createTr);
+  addRow(dataSet);
+  refresh(tBody, dataSet, createTr);
 });
 
 refreshBtn.addEventListener("click", () => {
   getData()
-    .then((data) => (sampleData = data || []))
-    .then(() => refresh(tBody, sampleData, createTr))
+    .then((data) => (dataSet = data || []))
+    .then(() => refresh(tBody, dataSet, createTr))
     .catch((error) => console.error(error));
 });
 
 moveUpBtn.addEventListener("click", () => {
-  moveRowUp(tBody, sampleData);
-  refresh(tBody, sampleData, createTr);
+  moveRowUp(tBody, dataSet);
+  refresh(tBody, dataSet, createTr);
 });
 
 moveDownBtn.addEventListener("click", () => {
-  moveRowDown(tBody, sampleData);
-  refresh(tBody, sampleData, createTr);
+  moveRowDown(tBody, dataSet);
+  refresh(tBody, dataSet, createTr);
 });
 
 deleteBtn.addEventListener("click", () => {
-  sampleData = deleteRows(tBody, sampleData);
-  refresh(tBody, sampleData, createTr);
+  dataSet = deleteRows(tBody, dataSet);
+  refresh(tBody, dataSet, createTr);
 });
 
 saveBtn.addEventListener("click", () => {
-  saveData(sampleData);
+  saveData(dataSet);
 });
 
 // Table-headers
@@ -77,46 +77,46 @@ selectAllHeader.addEventListener("click", (e) => {
 });
 
 idHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 chemicalNameHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 vendorHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 densityHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 viscosityHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 packagingHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 packSizeHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 unitHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
 
 quantityHeader.addEventListener("click", (e) => {
-  sortData(sampleData, e.target.innerText.toLowerCase());
-  refresh(tBody, sampleData, createTr);
+  sortData(dataSet, e.target.innerText.toLowerCase());
+  refresh(tBody, dataSet, createTr);
 });
